@@ -1,0 +1,45 @@
+@use "../utl/index" as var;
+
+#cals{
+    width: 80%;
+    margin: auto;
+    font-family: var.$font1;
+    margin-top: 18px;
+}
+
+.ouput,.inputGpr,.btnGpr{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin textStyle {
+    text-align: center;
+    width: 100%;
+    font-size: 36px;
+}
+
+.ouput{
+    background: #F0F0F0 ;
+    h2{
+        @include textStyle();
+    }
+}
+
+.inputGpr{
+    background: #96A1A9;
+    h2,input{
+        @include textStyle();
+    }
+}
+
+.btnGpr{
+    background: #8A9299 ;
+    button{
+        @include textStyle();
+        cursor: pointer;
+    }
+}

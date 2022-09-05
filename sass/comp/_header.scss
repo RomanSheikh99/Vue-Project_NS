@@ -1,0 +1,8 @@
+@use '../utl/vars';
+
+header{
+    background-color: vars.$bgColor;
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+}

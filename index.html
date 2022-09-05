@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- stylesheet link -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- vue link -->
+    <script src="js/vue.global.js"></script>
+
+    <!-- title -->
+    <title>Vue Feature Project</title>
+</head>
+<body>
+    
+    <div id="app">
+        <header>
+            <h1>{{wlcmText}}</h1>
+        </header>
+
+
+        <section  id="cals">
+            <h1>Feature 1 ... Simple Calculator</h1>
+            <div class="ouput">
+                <h2>{{result}}</h2>
+            </div>
+            <div class="inputGpr">
+                <input type="text" v-model.number="firstNum">
+                <h2 for="oparetor">{{oparetor}}</h2>
+                <input type="text" v-model.number="secNum">
+            </div>
+            <div class="btnGpr">
+                <button @click="plus">+</button>
+                <button @click="minus">-</button>
+                <button @click="multi">*</button>
+                <button @click="div">/</button>
+            </div>
+        </section>
+
+        <section id="game">
+            <h1>Feature 2 ... Dynamic Div</h1>
+            <div class="board">
+                <div :style="{top: topSite, left: leftSite}" class="ball"></div>
+            </div>
+            <div class="wrning-text">
+                <small>You can change the position of Red Div by clicking button</small>
+            </div>
+            <div class="arrowBtn">
+                <div @click.left="fLeft" class="left">left</div>
+                <div @click="fUp" class="up">up</div>
+                <div @click="fDown" class="down">down</div>
+                <div @click="fRight" class="right">Right</div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
